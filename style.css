@@ -1,0 +1,33 @@
+
+.nav-link{
+  opacity: 0.6;
+  color: antiquewhite;
+}
+.nav-link:hover{
+  color: #fafafa;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.nav-link:focus{
+  color:#dee2e6;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Fondos/fondo_principal.jpg);
+    background-repeat: no-repeat;
+    background-size:100vw;
+    background-attachment: fixed;
+}
+
+.tab-pane{
+  background-color: #dee2e6;
+  border-radius: 5px;
+  border-color: #dee2e6;
+  border-style: solid;
+  opacity: 0.6;
+
+}
