@@ -17,11 +17,95 @@
   <p>1) Proceso isobárico:     \( W_b = P_0 V_2 - V_1 \), donde \( (P_0 = P_1 = P_2) \) </p>
   <p>2) Proceso isotérmico:     \(  W_b=P_1V_1ln\frac{V_2}{V_1} =mRT_0ln\frac{V_2}{V_1} \),donde  \( PV=mRT_0=cte \) </p>
   <p>3) Proceso politrópico:     \(  W_b=\frac{P_2V_2-P_1V_1}{1-n} \),donde  \( (n\neq 1) \) & \((PV{^n}=cte)\) </p>
-  <p>3) Trabajo de resistencia:     \(  W_e=VI\), V:Voltaje </p>
-  <p>3) Trabajo de flecha:     \(  W_{flecha}=\frac{T}{r}\cdot2\pi rn_{rpm}\)
+  <p>4) Trabajo de resistencia:     \(  W_e=VI \cdot t\), V:Voltaje </p>
+  <p>5) Trabajo de flecha:     \(  W_{flecha}=\frac{T}{r}\cdot2\pi rn_{rpm} \cdot t\)
 
   <h3>2. Primera ley de la termodinámica</h3>
-  <p>La sumatoria de toda la energía que entra, menos la energía que sale, más la energía generada, menos la energía consumida, es igual al cambio en la energía interna de un sistema respecto al tiempo \[ E_{Entrada}-E_{Salida}+E_{Generada}-E_{Consumida}=\frac{du}{dt}\]</p>
+  <p>La sumatoria de toda la energía que entra, menos la energía que sale, más la energía generada, menos la energía consumida, es igual al cambio en la energía interna de un sistema respecto al tiempo 
+    \[ E_{Entrada}-E_{Salida}+E_{Generada}-E_{Consumida}=\frac{dE_{sistema}(t)}{dt}\]
+    \[ E_{Entrada}-E_{Salida}=\frac{dE_{sistema}(t)}{dt}\]
+    \[ Q_{Entrada}+W_{Entrada}-Q_{Salida}-W_{Salida}=\Delta U+\Delta EC + \Delta EP\]
+    donde
+    \[ \Delta U=m(u_2-u_1) \]
+    \[ \Delta EC=\frac{1}{2}m(\forall_2^2-\forall_1^2) \]
+    \[ \Delta EP=mg(z_2-z_1) \]
+    A presión constante, \(  \Delta H=\Delta U + W_{salida} \) 
+  </p>
+
+    <h3>3. cambios en energía interna, entalpía y calor específico</h3>
+    <p> calores específicos a volumen constante cv y presión constante cp definen la energía necesaria para aumentar la temperatura en un grado. Para gases ideales, u,h, cp y cv están en función de la temperatura:
+      \[ \Delta u=u_2-u_1=\int_{1}^{2} c_v(T) dT \cong c_{v,prom}(T_2-T_1)\]
+      \[ \Delta h=h_2-h_1=\int_{1}^{2} c_p(T) dT \cong c_{p,prom}(T_2-T_1)\]
+      \[ c_p=c_v+R\]
+      \[ k=\frac{c_p}{c_v}\]
+    </p>
+
+    <p> Para fluidos incompresibles, se tiene lo siguiente:
+      \[ c_p=c_v=c\]
+      \[ \Delta u=\int_{1}^{2} c(T) dT \cong c_{prom}(T_2-T_1)\]
+      \[ \Delta h=\Delta u + v\Delta P\]
+    </p>
+
+    <h3>4. Ejemplo de aplicación</h3>
+
+    <hr class="default" style="border-top: 5px double;">
+
+    <h2>Energía en volúmenes de control</h2>
+    <p> En los volúmenes de control, hay intercambio de materia, por lo que hay materia que entra, materia que sale, y cambio de materia respecto al tiempo dentro del volumen de control:
+      \[ \dot{m}_{entrada}-\dot{m}_{salida}=\frac{dm}{dt}\]
+      Despreciando los cambios en la energía interna del volumen de control:
+      \[ \dot{Q}_{entrada}+\dot{W}_{entrada}+\dot{m} \left[h_1+\frac{V_1^2}{2}+gz_1 \right]=\dot{Q}_{salida}+\dot{W}_{salida}+\dot{m} \left[h_2+\frac{V_2^2}{2}+gz_2 \right]\]
+      Como volumen de ocntrol, comunmente tendremos bombas, compresores, turbinas, toberas o difusores, y válvulas. Los primeros 3 tienen una influencia en forma de trabajo dentro del sistema, y las últimas 3 únicamente afectan la presión de salida del fluido
+
+      <ul>
+        <li>Tobera: Disminuye la presión del fluido modificando el área, desde un área mayor, a un área menor, sin modificar su entalpía, modificando la velocidad en un balance de masa</li>
+        <li>Difusor: Aumenta la presión del fluido modificando el área, desde un área menor, a un área mayor, sin modificar su entalpía, modificando la velocidad en un balance de masa</li>
+        <li>Turbina: Extrae energía del fluido que pasa por esta en forma de trabajo de salida, disminuyendo su presión. Aplica para líquidos y gases, dependiendo del tipo de turbina. Su fórmula de energía simplificando la ecuación primaria es: \(  W_T=\dot{m}(h_1-h_2)\) </li>
+        <li>Compresor: Entrega energía al fluido que pasa por este en forma de trabajo de entrada, aumentando su presión. Aplica solo para vapores y gases. Su fórmula de energía simplificando la ecuación primaria es: \(  W_C=\dot{m}(h_2-h_1)\) </li>
+        <li>Bomba: Entrega energía al fluido que pasa por este en forma de trabajo de entrada, aumentando su presión. Aplica solo para líquidoss. Su fórmula de energía simplificando la ecuación primaria es: \(  W_P=\dot{m}(h_2-h_1)\) </li>
+        <li>Válvula: Dispositivo que tumba presión, estrangulando el fluido, haciéndolo pasar por áreas muy pequeñas, generando pérdidas de presión por fricción, pero manteniendo la entalpía constante \(  H_{Entrada}=H_{Salida}\) </li>
+
+      </ul>
+    </p>
+    <h3>Ejemplo de aplicación</h3>
+
+
+    <hr class="default" style="border-top: 5px double;">
+    <h2>Entropía y segunda ley de la termodinámica</h2>
+    <h3>Segunda ley de la termodinámica</h3>
+    <p>
+
+    </p>
+
+    <ul>
+      <li>Ciclo de carnot: Ciclo ideal, completamente reversible. 2 procesos isotérmicos, 2 adiabáticos. \( \frac{Q_H}{Q_L}=\frac{T_H}{T_L} \).  Fórmula de eficiencia:  \( \eta= 1-\frac{T_L}{T_H} \)</li>
+      <li>COP refrigerante: Representa el desempeño de un refrigerante, relacionando el calor que extrae, y el calor que rechaza. el COP de refrigeración de carnot (ideal) se muestra en la siguiente Fórmula: \( COP_{R,rev}=\frac{1}{\frac{T_H}{T_L}-1}\) </li>
+      <li>COP Bomba de calor: Representa el desempeño de un refrigerante, relacionando el calor que extrae, y el calor que rechaza. el COP de bomba de calor de carnot (ideal) se muestra en la siguiente Fórmula: \( COP_{HP,rev}=\frac{1}{1-\frac{T_L}{T_H}}\) </li>
+    </ul>
+    <h3>Entropía</h3>
+    <p>
+      Proceso isotérmico reversible: \( \Delta S=\frac{Q}{T_0} \)
+      <ul>
+        <li>FLuidos incompresibles: \( s_2-s_1=c_{prom}ln\frac{T_H}{T_L} \)
+        <li>Gases ideales calor específico constante:</li>
+        \[ s_2-s_1=c_{v,prom}ln\frac{T_2}{T_1}+R\cdot ln\frac{v_2}{v_1}\]
+        \[ s_2-s_1=c_{P,prom}ln\frac{T_2}{T_1}-R\cdot ln\frac{P_2}{P_1}\]
+        Proceso isentrópico:
+        \[ \frac{T_2}{T_1}=\left(\frac{v_1}{v_2} \right)^{k-1}\]
+        \[ \frac{T_2}{T_1}=\left(\frac{P_2}{P_1} \right)^{(k-1)/k}\]
+        \[ \frac{P_2}{P_1}=\left(\frac{v_1}{v_2} \right)^{k}\]
+
+
+        <li>Gases ideales calor específico variable:</li>
+        \[ s_2-s_1=s_2^{\circ}-s_1^{\circ}-R\cdot ln\frac{P_2}{P_1}\]
+        Proceso isentrópico:
+        \[ s_2^{\circ}=s_1^{\circ}+R\cdot ln\frac{P_2}{P_1}\]
+        \[ \frac{P_2}{P_1}=\frac{P_{r2}}{P_{r1}} \]
+        \[ \frac{v_2}{v_1}=\frac{v_{r2}}{v_{r1}} \]
+
+      </ul>
+        
+    </p>
 
   
 
